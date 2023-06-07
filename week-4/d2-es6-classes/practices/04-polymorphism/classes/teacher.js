@@ -7,12 +7,15 @@ class Teacher extends Person {
     this.yearsOfExperience = yearsOfExperience;
   }
 
+introduce() {
+  return `Hello. I am ${firstName} ${lastName}, and I have been teaching ${subject} for ${yearsOfExperience} years.`
+}
   static combinedYearsOfExperience(teachers) {
-    let count = 0;
+    let sum = 0;
     for (const teacher of teachers) {
-      count += teacher.yearsOfExperience;
+      sum += teacher.yearsOfExperience;
     }
-    return count;
+    return sum;
   }
 }
 
